@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import BackToTop from '../components/BackToTop';
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -14,6 +15,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         {children}
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 };
