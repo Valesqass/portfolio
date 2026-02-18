@@ -2,27 +2,42 @@ import { motion } from 'framer-motion';
 
 const skillCategories = [
   {
-    title: 'Frontend',
+    title: 'Frontend & UI',
+    description: 'Expertise',
     skills: [
-      { name: 'HTML5 / CSS3', level: 95 },
-      { name: 'JavaScript (ES6+)', level: 90 },
-      { name: 'React.js', level: 85 },
-      { name: 'Next.js', level: 80 },
-      { name: 'TypeScript', level: 75 },
-      { name: 'Tailwind CSS', level: 90 },
-      { name: 'Three.js / R3F', level: 65 },
+      { name: 'React.js', description: 'Architecture de composants, Hooks, Context API' },
+      { name: 'Next.js', description: 'SSR, SSG, Routing avancé, API Routes' },
+      { name: 'React Native / Expo', description: 'Mobile cross-platform, EAS, Native Modules' },
+      { name: 'TypeScript', description: 'Typage strict, Interfaces, Generics' },
+      { name: 'Tailwind CSS', description: 'Design System, Responsive, Dark Mode' },
+      { name: 'GSAP / Framer', description: 'Animations complexes, Gestures, Timelines' },
+      { name: 'CSS3', description: 'Sémantique, Flexbox, Grid, SEO' }
     ]
   },
   {
-    title: 'Backend & Tools',
+    title: 'Backend & Data',
+    description: 'Architecture',
     skills: [
-      { name: 'Node.js', level: 70 },
-      { name: 'Supabase', level: 75 },
-      { name: 'Sentry', level: 70 },
-      { name: 'Git / GitHub', level: 85 },
-      { name: 'Vite', level: 85 },
-      { name: 'Figma', level: 80 },
-      { name: 'VS Code', level: 95 },
+      { name: 'Node.js', description: 'REST APIs, Middleware, Express/Fastify' },
+      { name: 'Supabase', description: 'Auth, Realtime, Edge Functions' },
+      { name: 'PostgreSQL', description: 'Modélisation relationnelle, Optimisation' },
+      { name: 'Firebase', description: 'Firestore, Cloud Functions, Auth' },
+      { name: 'Stripe', description: 'Paiements, Abonnements, Webhooks' },
+      { name: 'API REST / GraphQL', description: 'Design d\'API, Apollo, TanStack Query' },
+      { name: 'CMS Headless', description: 'Strapi, Contentful, Sanity' }
+    ]
+  },
+  {
+    title: 'DevOps & Tools',
+    description: 'Workflow',
+    skills: [
+      { name: 'Git / GitHub', description: 'Versionning, CI/CD Actions, PR Review' },
+      { name: 'Docker', description: 'Conteneurisation, Docker Compose' },
+      { name: 'Railway / Netlify', description: 'Déploiement, Infrastructure as Code' },
+      { name: 'Sentry', description: 'Monitoring, Error Tracking, Performance' },
+      { name: 'Vite / Webpack', description: 'Build tools, Configuration, Plugins' },
+      { name: 'Figma', description: 'Prototypage, Design System, Hand-off' },
+      { name: 'Jest / Testing', description: 'Unit Testing, Integration, E2E' }
     ]
   }
 ];
@@ -42,43 +57,45 @@ const Skills = () => {
             Compétences Techniques
           </h2>
           <p className="text-gray-600 max-w-2xl text-lg font-light">
-            Ma boîte à outils technologique, constamment mise à jour pour répondre aux standards modernes du développement web.
+            Ma stack technique détaillée et maîtrisée.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {skillCategories.map((category, catIndex) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, x: catIndex % 2 === 0 ? -20 : 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-bold mb-8 text-black border-b-2 border-black pb-4 uppercase tracking-wider">
-                {category.title}
-              </h3>
-              
-              <div className="space-y-6">
-                {category.skills.map((skill, index) => (
-                  <div key={skill.name}>
-                    <div className="flex justify-between mb-2">
-                      <span className="font-medium text-black">{skill.name}</span>
-                      <span className="text-gray-500 text-sm font-mono">{skill.level}%</span>
-                    </div>
-                    <div className="h-1 w-full bg-gray-100">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        transition={{ duration: 1, delay: 0.1 * index }}
-                        viewport={{ once: true }}
-                        className="h-full bg-black"
-                      />
-                    </div>
-                  </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {skillCategories.map((category, index) => (
+            <div key={category.title} className="space-y-6">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="border-b-2 border-black pb-4 mb-8"
+              >
+                <h3 className="text-2xl font-bold text-black uppercase tracking-wide">
+                  {category.title}
+                </h3>
+              </motion.div>
+
+              <div className="space-y-4">
+                {category.skills.map((skill, skillIndex) => (
+                  <motion.div
+                    key={skill.name}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: (index * 0.1) + (skillIndex * 0.05) }}
+                    viewport={{ once: true }}
+                    className="group border border-gray-100 hover:border-black p-4 transition-all duration-300 hover:bg-gray-50"
+                  >
+                    <h4 className="font-bold text-lg text-black mb-1 group-hover:translate-x-1 transition-transform">
+                      {skill.name}
+                    </h4>
+                    <p className="text-sm text-gray-500 font-light leading-relaxed">
+                      {skill.description}
+                    </p>
+                  </motion.div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

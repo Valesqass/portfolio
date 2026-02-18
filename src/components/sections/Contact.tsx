@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, MapPin, Phone, Github, Linkedin } from 'lucide-react';
+import { Send, Mail, MapPin, Phone, Github } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,10 +19,10 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
-    
+
     setIsSubmitting(false);
     setSubmitted(true);
     setFormData({ name: '', email: '', message: '' });
@@ -50,12 +50,12 @@ const Contact = () => {
                 <Mail className="w-6 h-6 text-white mt-1" />
                 <div>
                   <h4 className="font-bold text-white text-lg uppercase tracking-wide mb-1">Email</h4>
-                  <a href="mailto:contact@mikaellahlou.com" className="text-gray-400 hover:text-white transition-colors underline decoration-1 underline-offset-4">
-                    contact@mikaellahlou.com
+                  <a href="mailto:m_lahlou4@hetic.eu" className="text-gray-400 hover:text-white transition-colors underline decoration-1 underline-offset-4">
+                    m_lahlou4@hetic.eu
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-6">
                 <MapPin className="w-6 h-6 text-white mt-1" />
                 <div>
@@ -77,11 +77,8 @@ const Contact = () => {
             </div>
 
             <div className="flex gap-4">
-              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="p-4 border border-white/20 hover:bg-white hover:text-black transition-colors">
+              <a href="https://github.com/Valesqass" target="_blank" rel="noopener noreferrer" className="p-4 border border-white/20 hover:bg-white hover:text-black transition-colors">
                 <Github className="w-6 h-6" />
-              </a>
-              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="p-4 border border-white/20 hover:bg-white hover:text-black transition-colors">
-                <Linkedin className="w-6 h-6" />
               </a>
             </div>
           </motion.div>
@@ -100,7 +97,7 @@ const Contact = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">Message envoyé !</h3>
                   <p className="text-gray-400 mb-6">Merci de m'avoir contacté. Je vous répondrai dans les plus brefs délais.</p>
-                  <button 
+                  <button
                     onClick={() => setSubmitted(false)}
                     className="text-white font-bold hover:underline underline-offset-4 transition-all"
                   >
@@ -137,7 +134,7 @@ const Contact = () => {
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <label htmlFor="message" className="block text-sm font-bold text-gray-400 mb-2 uppercase tracking-wide">Message</label>
                     <textarea
@@ -151,7 +148,7 @@ const Contact = () => {
                       placeholder="Parlez-moi de votre projet..."
                     />
                   </div>
-                  
+
                   <button
                     type="submit"
                     disabled={isSubmitting}

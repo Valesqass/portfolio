@@ -5,18 +5,18 @@ const projects = [
   {
     id: 1,
     title: 'SYC-75',
-    category: 'Automobile',
-    description: 'Site vitrine haut de gamme pour un mandataire automobile. Conception minimaliste mettant en valeur les véhicules de prestige avec une navigation fluide et intuitive.',
-    tags: ['React', 'Tailwind CSS', 'Framer Motion'],
+    category: 'Full Stack',
+    description: 'Plateforme complète pour mandataire automobile de luxe. Intègre un système de réservation, paiements Stripe, messagerie instantanée et un tableau de bord administrateur pour la gestion de flotte.',
+    tags: ['React', 'Node.js', 'Stripe', 'Dashboard Admin'],
     link: 'https://syc-75.com',
     github: null
   },
   {
     id: 2,
     title: 'Maison 310',
-    category: 'Immobilier',
-    description: 'Plateforme immobilière moderne offrant une expérience utilisateur optimisée pour la recherche de biens. Interface épurée et responsive.',
-    tags: ['React', 'Vite', 'Responsive Design'],
+    category: 'Musique & Culture',
+    description: 'Site officiel du label musical Maison 310. Une expérience visuelle immersive reflétant l\'identité artistique du collectif, avec présentation des artistes et des dernières sorties.',
+    tags: ['React', 'Vite', 'Design System'],
     link: 'https://maison310.netlify.app',
     github: null
   },

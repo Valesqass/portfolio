@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Mail } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,28 +11,19 @@ const Footer = () => {
             &copy; {currentYear} Mikaël Lahlou. Tous droits réservés.
           </p>
         </div>
-        
+
         <div className="flex space-x-6">
-          <a 
-            href="https://github.com/" 
-            target="_blank" 
+          <a
+            href="https://github.com/Valesqass"
+            target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-black transition-colors"
             aria-label="GitHub"
           >
             <Github className="w-5 h-5" />
           </a>
-          <a 
-            href="https://linkedin.com/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-black transition-colors"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="w-5 h-5" />
-          </a>
-          <a 
-            href="mailto:contact@mikaellahlou.com" 
+          <a
+            href="mailto:m_lahlou4@hetic.eu"
             className="text-gray-400 hover:text-black transition-colors"
             aria-label="Email"
           >
