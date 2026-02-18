@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Code2 } from 'lucide-react';
+import { Code2 } from 'lucide-react';
 import { cn } from '../utils/cn';
 
 const Navbar = () => {
@@ -7,12 +7,13 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
+  // Handle scroll effect for navbar background
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
       
-      // Determine active section
       const sections = ['home', 'about', 'services', 'experience', 'projects', 'skills', 'contact'];
+      // Add offset to account for navbar height
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -32,13 +33,37 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
-    setIsOpen(false);
+    closeMenu();
     const element = document.getElementById(id);
     if (element) {
+      const navHeight = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+  
       window.scrollTo({
-        top: element.offsetTop - 80, // Adjust for navbar height
+        top: offsetPosition,
         behavior: 'smooth'
       });
     }
@@ -55,82 +80,121 @@ const Navbar = () => {
   ];
 
   return (
-    <nav
-      className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out',
-        scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-4 border-b border-gray-100' : 'bg-transparent py-6'
-      )}
-    >
-      <div className="container mx-auto px-6 flex justify-between items-center">
-        <a 
-          href="#home" 
-          onClick={(e) => scrollToSection(e, 'home')}
-          className="flex items-center space-x-2 text-black font-heading font-bold text-xl hover:text-gray-600 transition-colors"
-        >
-          <Code2 className="w-8 h-8 text-black" />
-          <span>Mikaël Lahlou</span>
-        </a>
+    <header>
+      <nav
+        className={cn(
+          'fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ease-in-out',
+          scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3 border-b border-gray-100' : 'bg-transparent py-4'
+        )}
+        role="navigation"
+        aria-label="Main navigation"
+      >
+        <div className="container mx-auto px-6 flex justify-between items-center relative z-[101]">
+          {/* Logo */}
+          <a 
+            href="#home" 
+            onClick={(e) => scrollToSection(e, 'home')}
+            className="flex items-center space-x-2 text-black font-heading font-bold text-lg hover:text-gray-600 transition-colors z-[101]"
+            aria-label="Mikaël Lahlou - Retour à l'accueil"
+          >
+            <Code2 className="w-6 h-6 text-black" aria-hidden="true" />
+            <span>Mikaël Lahlou</span>
+          </a>
 
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center space-x-6">
-          {navLinks.map((link) => (
-            <a
-              key={link.id}
-              href={`#${link.id}`}
-              onClick={(e) => scrollToSection(e, link.id)}
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.id}
+                href={`#${link.id}`}
+                onClick={(e) => scrollToSection(e, link.id)}
+                className={cn(
+                  'text-sm font-medium transition-colors hover:text-black relative group uppercase tracking-wider py-2',
+                  activeSection === link.id ? 'text-black font-bold' : 'text-gray-500'
+                )}
+                aria-current={activeSection === link.id ? 'page' : undefined}
+              >
+                {link.name}
+                <span className={cn(
+                  "absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full",
+                  activeSection === link.id ? "w-full" : ""
+                )} />
+              </a>
+            ))}
+          </div>
+
+          {/* Mobile Menu Button (Hamburger) */}
+          <button
+            className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none z-[101] relative"
+            onClick={toggleMenu}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
+            aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          >
+            <span 
               className={cn(
-                'text-sm font-medium transition-colors hover:text-black relative group uppercase tracking-wider',
-                activeSection === link.id ? 'text-black font-bold' : 'text-gray-500'
+                "block w-5 h-0.5 bg-black transition-transform duration-300 ease-in-out",
+                isOpen ? "rotate-45 translate-y-2" : ""
               )}
-            >
-              {link.name}
-              <span className={cn(
-                "absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full",
-                activeSection === link.id ? "w-full" : ""
-              )} />
-            </a>
-          ))}
+            />
+            <span 
+              className={cn(
+                "block w-5 h-0.5 bg-black transition-opacity duration-300 ease-in-out",
+                isOpen ? "opacity-0" : "opacity-100"
+              )}
+            />
+            <span 
+              className={cn(
+                "block w-5 h-0.5 bg-black transition-transform duration-300 ease-in-out",
+                isOpen ? "-rotate-45 -translate-y-2" : ""
+              )}
+            />
+          </button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden text-black focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </div>
+        {/* Mobile Menu Overlay */}
+        <div 
+          className={cn(
+            "fixed inset-0 bg-black/20 backdrop-blur-sm z-[90] transition-opacity duration-300 lg:hidden",
+            isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          )}
+          onClick={closeMenu}
+          aria-hidden="true"
+        />
 
-      {/* Mobile Navigation */}
-      <div
-        className={cn(
-          'lg:hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-8 transition-transform duration-300 ease-in-out',
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        )}
-        style={{ top: '0', paddingTop: '80px' }}
-      >
-        <button 
-          className="absolute top-6 right-6 text-black"
-          onClick={() => setIsOpen(false)}
+        {/* Mobile Navigation Menu */}
+        <div
+          id="mobile-menu"
+          className={cn(
+            "fixed inset-y-0 right-0 z-[100] w-full bg-white shadow-2xl transform transition-transform duration-300 ease-in-out lg:hidden flex flex-col pt-24 pb-8 px-6 overflow-y-auto",
+            isOpen ? "translate-x-0" : "translate-x-full"
+          )}
+          aria-hidden={!isOpen}
         >
-          <X className="w-8 h-8" />
-        </button>
-        
-        {navLinks.map((link) => (
-          <a
-            key={link.id}
-            href={`#${link.id}`}
-            onClick={(e) => scrollToSection(e, link.id)}
-            className={cn(
-              'text-xl font-heading font-bold transition-colors hover:text-gray-600 uppercase tracking-widest',
-              activeSection === link.id ? 'text-black' : 'text-gray-400'
-            )}
-          >
-            {link.name}
-          </a>
-        ))}
-      </div>
-    </nav>
+          <nav className="flex flex-col space-y-6" aria-label="Mobile navigation">
+            {navLinks.map((link) => (
+              <a
+                key={link.id}
+                href={`#${link.id}`}
+                onClick={(e) => scrollToSection(e, link.id)}
+                className={cn(
+                  'text-xl font-heading font-bold transition-all duration-200 uppercase tracking-widest border-b border-gray-100 pb-4',
+                  activeSection === link.id ? 'text-black pl-2 border-black' : 'text-gray-400 hover:text-gray-800 hover:pl-2'
+                )}
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
+
+          <div className="mt-auto pt-8 border-t border-gray-100">
+             <p className="text-xs text-gray-400 text-center uppercase tracking-widest">
+               © {new Date().getFullYear()} Mikaël Lahlou
+             </p>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 };
 
