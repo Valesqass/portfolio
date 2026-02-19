@@ -16,13 +16,13 @@ const About = () => {
             </h2>
             <div className="space-y-6 text-lg text-gray-800 font-light leading-relaxed">
               <p>
-                Je m'appelle <strong className="font-bold text-black">Mikaël Lahlou</strong>, un développeur web passionné basé à <span className="underline decoration-1 underline-offset-4">Montreuil</span>. Actuellement étudiant à <strong className="font-bold text-black">HETIC</strong>, je me spécialise dans la création d'interfaces numériques modernes et performantes.
+                Je m'appelle <strong className="font-bold text-black">Mikaël Lahlou</strong>, un développeur web passionné basé à <span className="underline decoration-1 underline-offset-4">Montreuil</span>. Actuellement étudiant à <strong className="font-bold text-black">HETIC</strong>, je conçois et développe des produits numériques modernes, performants et durables.
               </p>
               <p>
-                Mon approche du développement est ancrée dans la conviction que la simplicité est la sophistication ultime. Je privilégie un code propre, une architecture solide et une expérience utilisateur intuitive, sans superflu.
+                Je réalise des sites web <strong className="font-bold text-black">full‑stack</strong> de A à Z : de la conception à la mise en ligne. J’assure le front‑end, le back‑end et l’intégration/gestion des <strong className="font-bold text-black">bases de données</strong>, afin de livrer des applications fiables, évolutives et bien structurées.
               </p>
               <p>
-                Au-delà du code, je suis un résolveur de problèmes. J'aime déconstruire des défis complexes pour construire des solutions élégantes et durables. Mon objectif est de transformer vos idées en réalité digitale tangible, avec une précision technique et une sensibilité esthétique.
+                Je crée des interfaces graphiques sobres, intuitives et accessibles, au service de l’expérience utilisateur. Mon exigence : un code propre, une architecture solide et des performances mesurables — sans superflu.
               </p>
             </div>
           </motion.div>
