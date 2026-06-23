@@ -301,6 +301,7 @@ const Navbar = () => {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 onClick={closeMenu}
+                data-testid="mobile-menu-overlay"
                 className="fixed inset-0 bg-black/60 backdrop-blur-md z-[90]"
               />
 
@@ -308,6 +309,10 @@ const Navbar = () => {
               <motion.div
                 ref={panelRef}
                 id="mobile-menu"
+                role="dialog"
+                aria-modal="true"
+                aria-label="Menu"
+                tabIndex={-1}
                 initial={{ x: "100%" }}
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}

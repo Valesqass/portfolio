@@ -1,11 +1,67 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mikaël Lahlou | Portfolio</title>
-    <meta name="description" content="Portfolio de Mikaël Lahlou, développeur web spécialisé en React et Three.js." />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Primary Meta -->
+    <title>Mikaël Lahlou — Développeur web full-stack à Montreuil</title>
+    <meta
+      name="description"
+      content="Je conçois et développe des sites web et applications modernes, rapides et sur-mesure qui transforment vos visiteurs en clients. Développeur full-stack React, Node.js et mobile."
+    />
+    <meta name="author" content="Mikaël Lahlou" />
+    <link rel="canonical" href="https://mikaell.netlify.app/" />
+
+    <!-- Open Graph (LinkedIn, WhatsApp, Facebook) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mikaell.netlify.app/" />
+    <meta property="og:title" content="Mikaël Lahlou — Développeur web full-stack" />
+    <meta
+      property="og:description"
+      content="Sites web et applications modernes, rapides et sur-mesure qui transforment vos visiteurs en clients."
+    />
+    <meta property="og:image" content="https://mikaell.netlify.app/og-image.svg" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Mikaël Lahlou" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mikaël Lahlou — Développeur web full-stack" />
+    <meta
+      name="twitter:description"
+      content="Sites web et applications modernes, rapides et sur-mesure qui transforment vos visiteurs en clients."
+    />
+    <meta name="twitter:image" content="https://mikaell.netlify.app/og-image.svg" />
+
+    <!-- Structured data (Google rich results) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mikaël Lahlou",
+        "jobTitle": "Développeur web full-stack",
+        "url": "https://mikaell.netlify.app/",
+        "email": "mailto:m_lahlou4@hetic.eu",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Montreuil",
+          "addressCountry": "FR"
+        },
+        "knowsAbout": [
+          "React",
+          "TypeScript",
+          "Node.js",
+          "React Native",
+          "PostgreSQL",
+          "Développement web full-stack"
+        ],
+        "sameAs": ["https://github.com/Valesqass"]
+      }
+    </script>
+
     <script type="module">
       if (import.meta.hot?.on) {
         import.meta.hot.on('vite:error', (error) => {
@@ -20,6 +76,17 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!--
+      Formulaire caché pour la détection Netlify Forms au moment du build.
+      Le vrai formulaire (React, dans Contact.tsx) soumet vers ce "name".
+    -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

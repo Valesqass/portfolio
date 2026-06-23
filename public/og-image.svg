@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Mikaël Lahlou — Développeur web full-stack">
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect x="24" y="24" width="1152" height="582" fill="none" stroke="#000000" stroke-width="2"/>
+  <text x="80" y="150" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="6" fill="#000000">PORTFOLIO</text>
+  <line x1="80" y1="168" x2="290" y2="168" stroke="#000000" stroke-width="2"/>
+  <text x="78" y="320" font-family="Inter, Arial, sans-serif" font-size="104" font-weight="800" fill="#000000">MIKAËL LAHLOU</text>
+  <text x="80" y="400" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="300" fill="#1f2937">Développeur web full-stack</text>
+  <text x="80" y="510" font-family="Roboto, Arial, sans-serif" font-size="30" font-weight="400" fill="#4b5563">Des sites &amp; applications rapides, sur-mesure,</text>
+  <text x="80" y="552" font-family="Roboto, Arial, sans-serif" font-size="30" font-weight="400" fill="#4b5563">qui transforment vos visiteurs en clients.</text>
+  <g transform="translate(1000,470)">
+    <rect x="0" y="0" width="120" height="120" fill="#000000"/>
+    <rect x="0" y="0" width="14" height="14" fill="#ffffff"/>
+    <rect x="106" y="106" width="14" height="14" fill="#ffffff"/>
+  </g>
+</svg>

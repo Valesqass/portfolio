@@ -91,15 +91,17 @@ const Projects = () => {
               </div>
 
               <div className="flex gap-4 pt-6 border-t border-gray-100 group-hover:border-gray-800 mt-auto">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider hover:underline underline-offset-4"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  Visiter
-                </a>
+                {project.link?.startsWith('http') && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider hover:underline underline-offset-4"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Visiter
+                  </a>
+                )}
                 {project.github && (
                   <a
                     href={project.github}
