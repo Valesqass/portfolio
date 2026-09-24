@@ -16,10 +16,10 @@ const About = () => {
             </h2>
             <div className="space-y-6 text-lg text-gray-800 font-light leading-relaxed">
               <p>
-                Je m'appelle <strong className="font-bold text-black">Mikaël Lahlou</strong>, un développeur web passionné basé à <span className="underline decoration-1 underline-offset-4">Montreuil</span>. Actuellement étudiant à <strong className="font-bold text-black">HETIC</strong>, je conçois et développe des produits numériques modernes, performants et durables.
+                Je m'appelle <strong className="font-bold text-black">Mikaël Lahlou</strong>, un développeur web passionné basé à <span className="underline decoration-1 underline-offset-4">Montreuil</span>. Après mon Bachelor Développement Web à <strong className="font-bold text-black">HETIC</strong>, j'intègre le <strong className="font-bold text-black">Mastère CTO</strong> en novembre 2026 et je recherche une alternance de 2 ans.
               </p>
               <p>
-                Je réalise des sites web <strong className="font-bold text-black">full‑stack</strong> de A à Z : de la conception à la mise en ligne. J’assure le front‑end, le back‑end et l’intégration/gestion des <strong className="font-bold text-black">bases de données</strong>, afin de livrer des applications fiables, évolutives et bien structurées.
+                Je réalise des produits <strong className="font-bold text-black">full‑stack</strong> de A à Z : de la conception à la mise en production. J'ai développé seul la plateforme <strong className="font-bold text-black">SYC75</strong> (plus de 600 véhicules vendus) et je travaille sur l'application mobile <strong className="font-bold text-black">MATS</strong> (plus de 1 000 comptes) au sein d'une équipe internationale, en anglais.
               </p>
               <p>
                 Je crée des interfaces graphiques sobres, intuitives et accessibles, au service de l’expérience utilisateur. Mon exigence : un code propre, une architecture solide et des performances mesurables — sans superflu.

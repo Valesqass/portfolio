@@ -18,9 +18,9 @@ const skillCategories = [
     title: 'Backend & Data',
     description: 'Architecture',
     skills: [
-      { name: 'Node.js', description: 'REST APIs, Middleware, Express/Fastify' },
+      { name: 'Node.js', description: 'REST APIs, Middleware, Express, NestJS' },
       { name: 'Supabase', description: 'Auth, Realtime, Edge Functions' },
-      { name: 'PostgreSQL', description: 'Modélisation relationnelle, Optimisation' },
+      { name: 'PostgreSQL / Prisma', description: 'Modélisation relationnelle, ORM, Optimisation' },
       { name: 'Firebase', description: 'Firestore, Cloud Functions, Auth' },
       { name: 'Stripe', description: 'Paiements, Abonnements, Webhooks' },
       { name: 'API REST / GraphQL', description: 'Design d\'API, Apollo, TanStack Query' },

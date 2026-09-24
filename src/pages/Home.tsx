@@ -94,7 +94,25 @@ const Home = () => {
               >
                 Discuter de votre projet
               </a>
+
+              <a
+                href="/cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-transparent text-black font-bold text-sm tracking-wider uppercase border-2 border-black hover:bg-black hover:text-white transition-all flex items-center justify-center"
+              >
+                Mon CV
+              </a>
             </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mt-6 text-sm text-gray-600 font-medium uppercase tracking-wider"
+            >
+              Recherche une alternance de 2 ans · Mastère CTO HETIC · Nov. 2026
+            </motion.p>
           </div>
         </div>
       </section>

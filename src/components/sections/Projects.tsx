@@ -6,9 +6,18 @@ const projects = [
     id: 1,
     title: 'SYC-75',
     category: 'Full Stack',
-    description: 'Plateforme complète pour mandataire automobile de luxe. Intègre un système de réservation, paiements Stripe, messagerie instantanée et un tableau de bord administrateur pour la gestion de flotte.',
-    tags: ['React', 'Node.js', 'Stripe', 'Dashboard Admin'],
+    description: 'Plateforme complète pour mandataire automobile de luxe, conçue et développée seul : plus de 600 véhicules vendus. Intègre un système de réservation, paiements Stripe, messagerie instantanée et un tableau de bord administrateur pour la gestion de flotte.',
+    tags: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe'],
     link: 'https://syc-75.com',
+    github: null
+  },
+  {
+    id: 5,
+    title: 'MATS',
+    category: 'Mobile',
+    description: 'Application mobile publiée sur le Google Play Store, plus de 1 000 comptes créés. Design UI/UX des écrans, parcours de création de compte et nombreuses fonctionnalités, au sein d\'une équipe internationale (Dubaï, Hanoï).',
+    tags: ['React Native', 'Expo', 'TypeScript', 'UI/UX'],
+    link: 'https://matsformembers.com',
     github: null
   },
   {
@@ -27,7 +36,7 @@ const projects = [
     description: 'Première version de mon portfolio personnel. Exploration des technologies 3D web et du design interactif.',
     tags: ['React', 'Three.js', 'Tailwind CSS'],
     link: '/',
-    github: 'https://github.com/mikaellahlou/portfolio'
+    github: 'https://github.com/Valesqass/portfolio'
   },
   {
     id: 4,
@@ -36,6 +45,15 @@ const projects = [
     description: 'Application mobile dédiée au street workout, parkour et calisthénics. Plateforme communautaire permettant de trouver des spots, partager des entraînements et suivre sa progression.',
     tags: ['React Native', 'Expo', 'Supabase', 'Geolocalisation'],
     link: 'https://vstreets.fr',
+    github: null
+  },
+  {
+    id: 6,
+    title: 'Flipper connecté',
+    category: 'Projet HETIC',
+    description: 'Flipper connecté réalisé en équipe : firmware, bridge de communication entre le matériel et le logiciel, et logique de jeu en programmation orientée objet (Game Object Pattern).',
+    tags: ['POO', 'Firmware', 'IoT', 'Travail d\'équipe'],
+    link: null,
     github: null
   }
 ];

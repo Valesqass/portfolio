@@ -173,12 +173,12 @@ const Experience = () => {
             Expérience Professionnelle
           </h2>
           <p className="text-gray-600 max-w-2xl text-lg font-light">
-            Un parcours évolutif, de la formation académique aux projets complexes en freelance et en équipe.
+            Du plus récent au plus ancien : des produits en production, en freelance et en équipe.
           </p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto space-y-12">
-          {experiences.map((exp, index) => (
+          {[...experiences].reverse().map((exp, index) => (
             <motion.div
               key={exp.id}
               initial={{ opacity: 0, x: -20 }}
