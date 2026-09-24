@@ -3,16 +3,30 @@ import { motion } from 'framer-motion';
 const experiences = [
   {
     id: 1,
-    role: 'Étudiant',
+    role: 'Bachelor Développement Web',
     company: 'HETIC',
-    period: '2023 - Présent',
-    description: 'Formation supérieure aux métiers du web. Apprentissage théorique et pratique des technologies numériques, du design et du marketing digital.',
+    period: '2023 - 2026',
+    description: 'Bachelor Développement Web (titre RNCP niveau 6) à HETIC, Montreuil. Formation théorique et pratique aux technologies web, au design et à la gestion de projet.',
     achievements: [
       'Acquisition de compétences techniques solides',
       'Réalisation de projets académiques concrets',
       'Veille technologique et innovation'
     ],
     skills: ['Web Dev', 'Design', 'Marketing', 'Project Mgmt'],
+    link: null
+  },
+  {
+    id: 8,
+    role: 'Développeur Front-End & Designer UI/UX (Alternance)',
+    company: 'Nade Corp',
+    period: 'Oct. 2024 - 2026',
+    description: 'Alternance en tant que développeur front-end et designer UI/UX : conception des maquettes de sites et d\'applications web, puis développement des interfaces à partir de ces maquettes.',
+    achievements: [
+      'Maquettes et design UI/UX sur Figma',
+      'Intégration et développement des interfaces front-end',
+      'Du design au code, sur des projets web variés'
+    ],
+    skills: ['Front-End', 'UI/UX', 'Figma', 'React'],
     link: null
   },
   {
@@ -76,13 +90,14 @@ const experiences = [
     role: 'Développeur Full Stack',
     company: 'SYC75',
     period: 'Déc. 2025 - Présent',
-    description: 'Création complète du site web de l\'entreprise SYC75. Développement d\'une solution sur-mesure intégrant des fonctionnalités complexes pour un mandataire automobile de luxe.',
+    description: 'Conception et développement, seul et de bout en bout, de la plateforme Next.js de SYC75, mandataire automobile de luxe : front-end, back-end, base de données et back-office d\'administration.',
     achievements: [
-      'Architecture Full Stack (Auth, DB, Paiement)',
+      'Plus de 600 véhicules vendus via la plateforme',
+      'Architecture Full Stack (Auth, DB, Paiement Stripe)',
       'Système de réservation temps réel & Gestion de flotte',
-      'Expérience utilisateur premium et responsive'
+      'Back-office d\'administration sur-mesure'
     ],
-    skills: ['Full Stack', 'React', 'Node.js', 'PostgreSQL'],
+    skills: ['Next.js', 'React', 'Node.js', 'PostgreSQL', 'Stripe'],
     link: 'https://syc-75.com'
   },
   {
@@ -98,6 +113,48 @@ const experiences = [
     ],
     skills: ['Sentry', 'CI/CD', 'Security', 'Performance'],
     link: 'https://syc-75.com'
+  },
+  {
+    id: 9,
+    role: 'Développeur Mobile Freelance',
+    company: 'MATS (Mats-For-Members)',
+    period: 'Déc. 2025 - Présent',
+    description: 'Développement de l\'application mobile MATS au sein d\'une équipe internationale (Dubaï, Hanoï), en anglais : design UI/UX des écrans, parcours de création de compte et nombreuses fonctionnalités.',
+    achievements: [
+      'Application publiée sur le Google Play Store',
+      'Plus de 1 000 comptes utilisateurs créés',
+      'Process complet : design doc, staging, pull request, code review'
+    ],
+    skills: ['React Native', 'Expo', 'TypeScript', 'UI/UX'],
+    link: 'https://matsformembers.com'
+  },
+  {
+    id: 10,
+    role: 'Développeur - Projet d\'équipe',
+    company: 'flipper-hetic (HETIC)',
+    period: 'Févr. - Juil. 2026',
+    description: 'Conception d\'un flipper connecté en équipe : firmware, bridge de communication entre le matériel et le logiciel, et logique de jeu.',
+    achievements: [
+      'Firmware et bridge de communication',
+      'Logique de jeu en programmation orientée objet',
+      'Architecture Game Object Pattern'
+    ],
+    skills: ['POO', 'Firmware', 'IoT', 'Teamwork'],
+    link: null
+  },
+  {
+    id: 11,
+    role: 'Mastère CTO (Alternance)',
+    company: 'HETIC',
+    period: 'Dès Nov. 2026',
+    description: 'Mastère CTO (Bac+5) à HETIC, en alternance sur 2 ans au rythme de 3 semaines en entreprise et 1 semaine à l\'école.',
+    achievements: [
+      'Architecture logicielle et leadership technique',
+      'Rythme 3 semaines entreprise / 1 semaine école',
+      'Recherche d\'une alternance de développeur full-stack'
+    ],
+    skills: ['CTO', 'Architecture', 'Leadership', 'Alternance'],
+    link: null
   }
 ];
 
