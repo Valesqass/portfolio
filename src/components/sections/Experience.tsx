@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 const experiences = [
   {
     id: 1,
-    role: 'Bachelor Développement Web',
+    role: 'Diplômé : Concepteur Développeur de Solutions Digitales',
     company: 'HETIC',
     period: '2023 - 2026',
-    description: 'Bachelor Développement Web (titre RNCP niveau 6) à HETIC, Montreuil. Formation théorique et pratique aux technologies web, au design et à la gestion de projet.',
+    description: 'Titre RNCP niveau 6 (Bac+3) Concepteur Développeur de Solutions Digitales, obtenu à HETIC, Montreuil. Formation théorique et pratique aux technologies web, au design et à la gestion de projet.',
     achievements: [
       'Acquisition de compétences techniques solides',
       'Réalisation de projets académiques concrets',
