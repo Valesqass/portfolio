@@ -73,7 +73,7 @@ const experiences = [
   },
   {
     id: 5,
-    role: 'Lead Developer Mobile',
+    role: 'Développeur Mobile',
     company: 'Projet Personnel',
     period: 'Depuis Juin 2025',
     description: 'Conception et développement en solo d\'une application mobile innovante dédiée à la communauté Street Workout. Gestion de l\'intégralité du projet, de l\'architecture technique au design UI/UX.',

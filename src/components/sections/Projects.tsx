@@ -24,7 +24,7 @@ const projects = [
     id: 7,
     title: 'CFJJB Replay',
     category: 'Produit perso · Data & Vidéo',
-    description: 'Plateforme qui retrouve automatiquement tous les combats des opens de jiu-jitsu brésilien (CFJJB) dans les lives YouTube : un pipeline Python lit l\'incrustation à l\'écran (OCR), découpe chaque combat et génère une page par athlète. Plus de 1 600 combats et 1 300 athlètes indexés, en ligne quelques heures après la compétition.',
+    description: 'Inspiré de jjbfight.fr, j\'ai automatisé toute la chaîne : un pipeline Python retrouve les combats des opens de jiu-jitsu brésilien (CFJJB) dans les lives YouTube, lit l\'incrustation à l\'écran (OCR), découpe chaque combat et génère une page par athlète. Près de 2 000 combats et 1 700 athlètes indexés.',
     tags: ['Python', 'OCR', 'Astro', 'TypeScript', 'Netlify'],
     link: 'https://cfjjb-replay.netlify.app',
     github: null
