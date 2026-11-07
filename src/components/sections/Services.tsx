@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 const services = [
   {
     title: 'Backend & Base de Données',
+    benefit: "Vos données sont fiables, sécurisées et toujours disponibles, même quand votre activité grandit.",
     description: 'Conception d\'architectures scalables et robustes. Je développe des APIs performantes et sécurisées, en maîtrisant les technologies SQL et NoSQL pour garantir l\'intégrité et la disponibilité de vos données critiques.',
     details: [
       'Architecture microservices & Transactions',
@@ -13,6 +14,7 @@ const services = [
   },
   {
     title: 'Frontend & Web Design',
+    benefit: "Un site beau, rapide et agréable sur mobile, qui donne envie à vos visiteurs de vous contacter.",
     description: 'Création d\'interfaces premium, interactives et centrées sur l\'utilisateur. J\'allie esthétique moderne et technologies de pointe pour offrir des expériences fluides, avec une attention méticuleuse aux micro-interactions et au responsive design.',
     details: [
       'Design System & UI/UX Mobile-First',
@@ -23,6 +25,7 @@ const services = [
   },
   {
     title: 'Solutions Full Stack',
+    benefit: "Votre outil métier sur-mesure : espace client, back-office et paiements en ligne, prêts à l'emploi.",
     description: 'Développement d\'applications web complexes de bout en bout. De la gestion utilisateur avancée aux systèmes de paiement sécurisés, je crée des plateformes robustes adaptées à vos besoins métiers spécifiques.',
     details: [
       'Tableaux de bord & Back-office',
@@ -33,6 +36,7 @@ const services = [
   },
   {
     title: 'Systèmes de Réservation',
+    benefit: "Vos clients réservent et paient en ligne 24 h/24, sans appel ni double réservation.",
     description: 'Expertise dans la création de moteurs de réservation et de gestion de stocks performants. Je conçois des systèmes de filtrage avancés et des calendriers de disponibilité synchronisés pour tous types de services.',
     details: [
       'Moteurs de recherche multicritères',
@@ -43,6 +47,7 @@ const services = [
   },
   {
     title: 'Applications Mobiles',
+    benefit: "Votre application sur l'App Store et Google Play, de l'idée à la publication.",
     description: 'Conception d\'applications natives et cross-platform performantes. Je transforme vos idées en applications mobiles intuitives, intégrant géolocalisation, paiements et fonctionnalités offline, comme réalisé pour l\'application VStreet.',
     details: [
       'Développement React Native / Expo',
@@ -53,6 +58,7 @@ const services = [
   },
   {
     title: 'SEO & Performance',
+    benefit: "Plus de visibilité sur Google, plus de visiteurs et plus de demandes de devis.",
     description: 'Maximisation de votre visibilité et de vos performances techniques. J\'optimise chaque aspect de votre site, du code à la sémantique, pour garantir un classement optimal et une expérience utilisateur ultra-rapide.',
     details: [
       'Audit Core Web Vitals & Loading Speed',
@@ -78,7 +84,7 @@ const Services = () => {
             Services & Expertise
           </h2>
           <p className="text-gray-600 max-w-2xl text-lg font-light">
-            Une approche technique complète et sur-mesure, de la conception d'architectures complexes au développement d'interfaces utilisateurs premium.
+            Ce que je construis pour vous, du site vitrine à l'application complète : sur-mesure, rapide et pensé pour votre activité.
           </p>
         </motion.div>
 
@@ -95,7 +101,11 @@ const Services = () => {
               <h3 className="text-xl font-bold mb-4 group-hover:underline decoration-2 underline-offset-4 uppercase tracking-wide min-h-[3.5rem] flex items-end">
                 {service.title}
               </h3>
-              
+
+              <p className="text-black font-semibold mb-4 leading-snug">
+                {service.benefit}
+              </p>
+
               <p className="text-gray-600 mb-6 leading-relaxed font-light text-sm flex-grow">
                 {service.description}
               </p>
