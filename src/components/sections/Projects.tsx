@@ -21,6 +21,15 @@ const projects = [
     github: null
   },
   {
+    id: 7,
+    title: 'CFJJB Replay',
+    category: 'Produit perso · Data & Vidéo',
+    description: 'Plateforme qui retrouve automatiquement tous les combats des opens de jiu-jitsu brésilien (CFJJB) dans les lives YouTube : un pipeline Python lit l\'incrustation à l\'écran (OCR), découpe chaque combat et génère une page par athlète. Plus de 1 600 combats et 1 300 athlètes indexés, en ligne quelques heures après la compétition.',
+    tags: ['Python', 'OCR', 'Astro', 'TypeScript', 'Netlify'],
+    link: 'https://cfjjb-replay.netlify.app',
+    github: null
+  },
+  {
     id: 2,
     title: 'Maison 310',
     category: 'Musique & Culture',
@@ -28,15 +37,6 @@ const projects = [
     tags: ['React', 'Vite', 'Design System'],
     link: 'https://maison310.netlify.app',
     github: null
-  },
-  {
-    id: 3,
-    title: 'Portfolio V1',
-    category: 'Personnel',
-    description: 'Première version de mon portfolio personnel. Exploration des technologies 3D web et du design interactif.',
-    tags: ['React', 'Three.js', 'Tailwind CSS'],
-    link: '/',
-    github: 'https://github.com/Valesqass/portfolio'
   },
   {
     id: 4,

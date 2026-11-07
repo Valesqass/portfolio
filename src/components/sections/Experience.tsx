@@ -144,16 +144,16 @@ const experiences = [
   },
   {
     id: 11,
-    role: 'Mastère CTO (Alternance)',
+    role: 'Mastère CTO',
     company: 'HETIC',
     period: 'Dès Nov. 2026',
-    description: 'Mastère CTO (Bac+5) à HETIC, en alternance sur 2 ans au rythme de 3 semaines en entreprise et 1 semaine à l\'école.',
+    description: 'Mastère CTO (Bac+5) à HETIC : architecture logicielle, pilotage technique de produits et management d\'équipes tech, en parallèle de mon activité de développeur.',
     achievements: [
-      'Architecture logicielle et leadership technique',
-      'Rythme 3 semaines entreprise / 1 semaine école',
-      'Recherche d\'une alternance de développeur full-stack'
+      'Architecture logicielle et choix techniques',
+      'Leadership et pilotage d\'équipes tech',
+      'Stratégie produit et sécurité des systèmes'
     ],
-    skills: ['CTO', 'Architecture', 'Leadership', 'Alternance'],
+    skills: ['CTO', 'Architecture', 'Leadership', 'Produit'],
     link: null
   }
 ];
@@ -183,8 +183,8 @@ const Experience = () => {
               key={exp.id}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              viewport={{ once: true, amount: 0.1 }}
               className="relative pl-8 md:pl-0"
             >
               {/* Timeline line for desktop */}

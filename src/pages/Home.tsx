@@ -111,7 +111,7 @@ const Home = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="mt-6 text-sm text-gray-600 font-medium uppercase tracking-wider"
             >
-              Recherche une alternance de 2 ans · Mastère CTO HETIC · Nov. 2026
+              Disponible pour vos projets en freelance · Ouvert à un CDI · Paris &amp; Île-de-France
             </motion.p>
           </div>
         </div>
