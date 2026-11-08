@@ -16,6 +16,13 @@ const temoignages: Temoignage[] = [
     role: 'CEO de SYC75',
     lien: 'https://syc-75.com',
   },
+  {
+    citation:
+      "Mikaël a travaillé avec nous sur l'application MATS. Il est efficace, livre ses tâches en temps et en heure et fait exactement ce qu'on lui demande, avec une qualité irréprochable. Il est aussi très créatif et apporte de vraies idées sur le design et l'expérience utilisateur. Un vrai atout pour une équipe.",
+    auteur: 'Elias',
+    role: 'Co-fondateur de MATS',
+    lien: 'https://matsformembers.com',
+  },
 ];
 
 const Temoignages = () => (
@@ -31,7 +38,7 @@ const Temoignages = () => (
         Ils m'ont fait confiance
       </motion.h2>
 
-      <div className="grid grid-cols-1 gap-12 max-w-4xl">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
         {temoignages.map((t) => (
           <motion.figure
             key={t.auteur}
@@ -44,7 +51,7 @@ const Temoignages = () => (
             <span aria-hidden="true" className="block text-7xl leading-none font-heading text-gray-600 mb-2">
               “
             </span>
-            <blockquote className="text-2xl md:text-3xl font-light leading-snug mb-8">
+            <blockquote className="text-xl md:text-2xl font-light leading-snug mb-8">
               {t.citation}
             </blockquote>
             <figcaption className="text-sm uppercase tracking-widest">
