@@ -10,6 +10,7 @@ import Projects from '../components/sections/Projects';
 import Skills from '../components/sections/Skills';
 import Contact from '../components/sections/Contact';
 import Methode from '../components/sections/Methode';
+import Temoignages from '../components/sections/Temoignages';
 
 // Heavy Three.js scene is code-split so it never blocks first paint.
 const HeroScene = lazy(() => import('../components/hero/HeroScene'));
@@ -123,6 +124,7 @@ const Home = () => {
       <Services />
       <Experience />
       <Projects />
+      <Temoignages />
       <Skills />
       <Methode />
       <Contact />
