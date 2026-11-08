@@ -17,10 +17,10 @@ const experiences = [
   },
   {
     id: 8,
-    role: 'Développeur Front-End & Designer UI/UX (Alternance)',
+    role: 'Développeur Front-End & Designer UI/UX',
     company: 'Nade Corp',
     period: 'Oct. 2024 - 2026',
-    description: 'Alternance en tant que développeur front-end et designer UI/UX : conception des maquettes de sites et d\'applications web, puis développement des interfaces à partir de ces maquettes.',
+    description: 'Développeur front-end et designer UI/UX : conception des maquettes de sites et d\'applications web, puis développement des interfaces à partir de ces maquettes.',
     achievements: [
       'Maquettes et design UI/UX sur Figma',
       'Intégration et développement des interfaces front-end',
@@ -140,20 +140,6 @@ const experiences = [
       'Architecture Game Object Pattern'
     ],
     skills: ['POO', 'Firmware', 'IoT', 'Teamwork'],
-    link: null
-  },
-  {
-    id: 11,
-    role: 'Mastère CTO',
-    company: 'HETIC',
-    period: 'Dès Nov. 2026',
-    description: 'Mastère CTO (Bac+5) à HETIC : architecture logicielle, pilotage technique de produits et management d\'équipes tech, en parallèle de mon activité de développeur.',
-    achievements: [
-      'Architecture logicielle et choix techniques',
-      'Leadership et pilotage d\'équipes tech',
-      'Stratégie produit et sécurité des systèmes'
-    ],
-    skills: ['CTO', 'Architecture', 'Leadership', 'Produit'],
     link: null
   }
 ];

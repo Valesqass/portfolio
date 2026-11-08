@@ -16,7 +16,7 @@ const About = () => {
             </h2>
             <div className="space-y-6 text-lg text-gray-800 font-light leading-relaxed">
               <p>
-                Je m'appelle <strong className="font-bold text-black">Mikaël Lahlou</strong>, un développeur web passionné basé à <span className="underline decoration-1 underline-offset-4">Montreuil</span>. Diplômé d'<strong className="font-bold text-black">HETIC</strong> (Concepteur Développeur de Solutions Digitales, Bac+3), j'intègre le <strong className="font-bold text-black">Mastère CTO</strong> en novembre 2026. Je suis disponible pour vos projets en <strong className="font-bold text-black">freelance</strong> et ouvert à un <strong className="font-bold text-black">CDI</strong>.
+                Je m'appelle <strong className="font-bold text-black">Mikaël Lahlou</strong>, un développeur web passionné basé à <span className="underline decoration-1 underline-offset-4">Montreuil</span>. Diplômé d'<strong className="font-bold text-black">HETIC</strong> (Concepteur Développeur de Solutions Digitales, Bac+3). Je suis disponible pour vos projets en <strong className="font-bold text-black">freelance</strong> et ouvert à un <strong className="font-bold text-black">CDI</strong>.
               </p>
               <p>
                 Je réalise des produits <strong className="font-bold text-black">full‑stack</strong> de A à Z : de la conception à la mise en production. J'ai développé seul la plateforme <strong className="font-bold text-black">SYC75</strong> (plus de 600 véhicules vendus) et je travaille sur l'application mobile <strong className="font-bold text-black">MATS</strong> (plus de 1 000 comptes) au sein d'une équipe internationale, en anglais.
