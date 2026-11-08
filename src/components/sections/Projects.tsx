@@ -1,10 +1,16 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
+import imgSyc75 from '../../assets/projets/syc75.webp';
+import imgMats from '../../assets/projets/mats.webp';
+import imgCfjjb from '../../assets/projets/cfjjb.webp';
+import imgMaison310 from '../../assets/projets/maison310.webp';
+import imgVstreet from '../../assets/projets/vstreet.webp';
 
 const projects = [
   {
     id: 1,
     title: 'SYC-75',
+    image: imgSyc75,
     category: 'Full Stack',
     description: 'Plateforme complète pour mandataire automobile de luxe, conçue et développée seul : plus de 600 véhicules vendus. Intègre un système de réservation, paiements Stripe, messagerie instantanée et un tableau de bord administrateur pour la gestion de flotte.',
     tags: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe'],
@@ -14,6 +20,7 @@ const projects = [
   {
     id: 5,
     title: 'MATS',
+    image: imgMats,
     category: 'Mobile',
     description: 'Application mobile publiée sur le Google Play Store, plus de 1 000 comptes créés. Design UI/UX des écrans, parcours de création de compte et nombreuses fonctionnalités, au sein d\'une équipe internationale (Dubaï, Hanoï).',
     tags: ['React Native', 'Expo', 'TypeScript', 'UI/UX'],
@@ -23,6 +30,7 @@ const projects = [
   {
     id: 7,
     title: 'CFJJB Replay',
+    image: imgCfjjb,
     category: 'Produit perso · Data & Vidéo',
     description: 'Inspiré de jjbfight.fr, j\'ai automatisé toute la chaîne : un pipeline Python retrouve les combats des opens de jiu-jitsu brésilien (CFJJB) dans les lives YouTube, lit l\'incrustation à l\'écran (OCR), découpe chaque combat et génère une page par athlète. Près de 2 000 combats et 1 700 athlètes indexés.',
     tags: ['Python', 'OCR', 'Astro', 'TypeScript', 'Netlify'],
@@ -32,6 +40,7 @@ const projects = [
   {
     id: 2,
     title: 'Maison 310',
+    image: imgMaison310,
     category: 'Musique & Culture',
     description: 'Site officiel du label musical Maison 310. Une expérience visuelle immersive reflétant l\'identité artistique du collectif, avec présentation des artistes et des dernières sorties.',
     tags: ['React', 'Vite', 'Design System'],
@@ -41,6 +50,7 @@ const projects = [
   {
     id: 4,
     title: 'VStreet',
+    image: imgVstreet,
     category: 'Mobile',
     description: 'Application mobile dédiée au street workout, parkour et calisthénics. Plateforme communautaire permettant de trouver des spots, partager des entraînements et suivre sa progression.',
     tags: ['React Native', 'Expo', 'Supabase', 'Geolocalisation'],
@@ -50,6 +60,7 @@ const projects = [
   {
     id: 6,
     title: 'Flipper connecté',
+    image: null,
     category: 'Projet HETIC',
     description: 'Flipper connecté réalisé en équipe : firmware, bridge de communication entre le matériel et le logiciel, et logique de jeu en programmation orientée objet (Game Object Pattern).',
     tags: ['POO', 'Firmware', 'IoT', 'Travail d\'équipe'],
@@ -87,6 +98,19 @@ const Projects = () => {
               viewport={{ once: true }}
               className="bg-white p-8 border border-black hover:bg-black hover:text-white transition-colors duration-300 group flex flex-col h-full"
             >
+              {project.image && (
+                <div className="-mx-8 -mt-8 mb-6 border-b border-black overflow-hidden bg-gray-100 aspect-[16/9]">
+                  <img
+                    src={project.image}
+                    alt={`Capture d'écran du projet ${project.title}`}
+                    width={960}
+                    height={508}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              )}
               <div className="mb-auto">
                 <span className="text-xs font-bold uppercase tracking-wider text-gray-400 group-hover:text-gray-400 mb-2 block">
                   {project.category}
