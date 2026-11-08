@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, MapPin, Phone, Github, AlertCircle } from 'lucide-react';
+import { Send, Mail, MapPin, Phone, Github, AlertCircle, Linkedin } from 'lucide-react';
 
 type SubmitStatus = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -84,10 +84,10 @@ const Contact = () => {
                     Email
                   </h4>
                   <a
-                    href="mailto:m_lahlou4@hetic.eu"
+                    href="mailto:mikael.lahlou.pro@gmail.com"
                     className="text-gray-400 hover:text-white transition-colors underline decoration-1 underline-offset-4"
                   >
-                    m_lahlou4@hetic.eu
+                    mikael.lahlou.pro@gmail.com
                   </a>
                 </div>
               </div>
@@ -110,7 +110,7 @@ const Contact = () => {
                   </h4>
                   <p className="text-green-400 font-medium flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                    Ouvert aux opportunités
+                    Disponible · Freelance &amp; CDI
                   </p>
                 </div>
               </div>
@@ -125,6 +125,15 @@ const Contact = () => {
                 className="p-4 border border-white/20 hover:bg-white hover:text-black transition-colors"
               >
                 <Github className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mika%C3%ABl-lahlou-0899212b8/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="p-4 border border-white/20 hover:bg-white hover:text-black transition-colors"
+              >
+                <Linkedin className="w-6 h-6" />
               </a>
             </div>
           </motion.div>
@@ -243,7 +252,7 @@ const Contact = () => {
                   >
                     <AlertCircle className="w-4 h-4 shrink-0" />
                     L'envoi a échoué. Réessayez ou écrivez-moi directement à
-                    m_lahlou4@hetic.eu.
+                    mikael.lahlou.pro@gmail.com.
                   </p>
                 )}
 
