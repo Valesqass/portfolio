@@ -17,10 +17,10 @@ const experiences = [
   },
   {
     id: 8,
-    role: 'Développeur Front-End & Designer UI/UX',
+    role: 'Développeur Front-End & Designer UI/UX (Alternance)',
     company: 'Nade Corp',
     period: 'Oct. 2024 - 2026',
-    description: 'Développeur front-end et designer UI/UX : conception des maquettes de sites et d\'applications web, puis développement des interfaces à partir de ces maquettes.',
+    description: 'Alternance en tant que développeur front-end et designer UI/UX : conception des maquettes de sites et d\'applications web, puis développement des interfaces à partir de ces maquettes.',
     achievements: [
       'Maquettes et design UI/UX sur Figma',
       'Intégration et développement des interfaces front-end',
